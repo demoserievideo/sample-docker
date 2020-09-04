@@ -19,9 +19,9 @@ jobs:
         password: ${{ secrets.GH_PACKAGES_TOKEN }}
     
     - run: |
-        docker build -t ghcr.io/demoserievideo/sample-artifact-docker/sample:latest -f Dockerfile .
-        docker tag ghcr.io/demoserievideo/sample-artifact-docker/sample:latest ghcr.io/demoserievideo/sample-artifact-docker/sample:${{ github.sha }}
+        docker build -t ghcr.io/demoserievideo/sample-docker/hello-world:latest -f Dockerfile .
+        docker tag ghcr.io/demoserievideo/sample-docker/hello-world:latest ghcr.io/demoserievideo/sample-docker/hello-world:${{ github.sha }}
     
     - run: |
-        docker push ghcr.io/demoserievideo/sample-artifact-docker/sample:latest
-        docker push ghcr.io/demoserievideo/sample-artifact-docker/sample:${{ github.sha }}
+        docker push ghcr.io/demoserievideo/sample-docker/hello-world:latest
+        docker push ghcr.io/demoserievideo/sample-docker/hello-world:${{ github.sha }}
