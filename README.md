@@ -13,3 +13,4 @@ To Autenticate in GitHub Artifacts, i used the action [azure/docker-login@v1](ht
         password: ${{ secrets.GITHUB_TOKEN }}
 ```
 In Password, I using the GITHUB_TOKEN, env variable.
+\
